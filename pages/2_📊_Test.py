@@ -102,11 +102,11 @@ with st.form("Cuestionario"):
 
         total = sum(respuestas.values())
         
-        
+        porcetanje = total/(5*12)*100
         if total > 40:
-            st.info('#### Tienes alta probabilidad de contraer una enfermedad mental')
+            st.write(f'#### Tienes alta probabilidad de contraer una enfermedad mental ({porcetanje}%)')
         else:
-            st.info('#### Tienes baja probabilidad de contraer una enfermedad mental')
+            st.write(f'#### Tienes baja probabilidad de contraer una enfermedad mental ({porcetanje}%)')
         
         tab1, tab2 = st.tabs(["📈 Gráficas", "🗃 Data"])
 
