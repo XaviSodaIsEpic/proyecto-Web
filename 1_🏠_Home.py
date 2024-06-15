@@ -5,6 +5,10 @@ st.set_page_config(
     page_icon="📊"
 )
 
+with st.sidebar:
+    st.image("logo.png")
+    
+
 colT1,colT2 = st.columns([1,3])
 colT2.title("PÁGINA PRINCIPAL")
 
@@ -17,4 +21,5 @@ st.write('En este contexto, el estudio se ha centrado en analizar el estado de s
 
 st.divider()
 colT1,colT2 = st.columns([1,3])
-colT2.page_link("pages/2_📊_Proyecto.py", label="INICIAR TEST", icon="➡")
+colT2.page_link("pages/2_📊_Test.py", label="INICIAR TEST", icon="➡")
+
