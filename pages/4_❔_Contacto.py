@@ -2,6 +2,8 @@ import streamlit as st
 
 colT1,colT2 = st.columns([1,3])
 colT2.title("CONTACTO 📫")
+with st.sidebar:
+    st.image("logo.png")
 
 contact_form = """
 <form action="https://formsubmit.co/xaviven05@gmail.com" method="POST">
