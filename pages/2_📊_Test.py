@@ -6,6 +6,8 @@ import time
 colT1,colT2 = st.columns([1,3])
 colT2.title("TEST SALUD MENTAL")
 
+with st.sidebar:
+    st.image("logo.png")
     
 respuestas = {}
 
@@ -32,40 +34,40 @@ respuestasPorEnfermadad = {}
 
 with st.form("Cuestionario"): 
     st.subheader('Pregunta 1')
-    pregunta_1 = st.slider("¿Con qué frecuencia utilizas las redes sociales sin un propósito específico?",0,5)
+    pregunta_1 = st.slider("¿Con qué frecuencia utilizas las redes sociales sin un propósito específico?",1,5)
     
     st.subheader('Pregunta 2')
-    pregunta_2 = st.slider("¿Con qué frecuencia te distraes con las redes sociales cuando estás ocupado haciendo algo?",0,5)
+    pregunta_2 = st.slider("¿Con qué frecuencia te distraes con las redes sociales cuando estás ocupado haciendo algo?",1,5)
     
     st.subheader('Pregunta 3')
-    pregunta_3 = st.slider("¿Te sientes inquieto si hace tiempo que no utilizas las redes sociales?",0,5)
+    pregunta_3 = st.slider("¿Te sientes inquieto si hace tiempo que no utilizas las redes sociales?",1,5)
     
     st.subheader('Pregunta 4')
-    pregunta_4 = st.slider("En una escala del 1 al 5, ¿con qué facilidad te distraes?",0,5)
+    pregunta_4 = st.slider("En una escala del 1 al 5, ¿con qué facilidad te distraes?",1,5)
     
     st.subheader('Pregunta 5')
-    pregunta_5 = st.slider("En una escala del 1 al 5, ¿cuánto le molestan las preocupaciones?",0,5)
+    pregunta_5 = st.slider("En una escala del 1 al 5, ¿cuánto le molestan las preocupaciones?",1,5)
     
     st.subheader('Pregunta 6')
-    pregunta_6 = st.slider("¿Le resulta difícil concentrarse en las cosas?",0,5)
+    pregunta_6 = st.slider("¿Le resulta difícil concentrarse en las cosas?",1,5)
     
     st.subheader('Pregunta 7')
-    pregunta_7 = st.slider("En una escala del 1 al 5, ¿con qué frecuencia te comparas con otras personas exitosas mediante el uso de las redes sociales?'",0,5)
+    pregunta_7 = st.slider("En una escala del 1 al 5, ¿con qué frecuencia te comparas con otras personas exitosas mediante el uso de las redes sociales?'",1,5)
     
     st.subheader('Pregunta 8')
-    pregunta_8 = st.slider("Siguiendo la pregunta anterior, ¿cómo te sientes acerca de estas comparaciones, en términos generales?",0,5)
+    pregunta_8 = st.slider("Siguiendo la pregunta anterior, ¿cómo te sientes acerca de estas comparaciones, en términos generales?",1,5)
     
     st.subheader('Pregunta 9')
-    pregunta_9 = st.slider("¿Con qué frecuencia buscas validación en las funciones de las redes sociales?",0,5)
+    pregunta_9 = st.slider("¿Con qué frecuencia buscas validación en las funciones de las redes sociales?",1,5)
     
     st.subheader('Pregunta 10')
-    pregunta_10 = st.slider("¿Con qué frecuencia te sientes deprimido o decaído?",0,5)
+    pregunta_10 = st.slider("¿Con qué frecuencia te sientes deprimido o decaído?",1,5)
     
     st.subheader('Pregunta 11')
-    pregunta_11 = st.slider("En una escala del 1 al 5, ¿con qué frecuencia fluctúa su interés en las actividades diarias?",0,5)
+    pregunta_11 = st.slider("En una escala del 1 al 5, ¿con qué frecuencia fluctúa su interés en las actividades diarias?",1,5)
     
     st.subheader('Pregunta 12')
-    pregunta_12 = st.slider("En una escala del 1 al 5, ¿con qué frecuencia tiene problemas relacionados con el sueño?",0,5)
+    pregunta_12 = st.slider("En una escala del 1 al 5, ¿con qué frecuencia tiene problemas relacionados con el sueño?",1,5)
     
     
     for pregunta, tipo_lista in tipo_pregunta.items():
