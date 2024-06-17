@@ -7,7 +7,7 @@ with st.sidebar:
     st.image("UPV.png")
 
 contact_form = """
-<form action="https://formsubmit.co/xaviven05@gmail.com" method="POST">
+<form action="https://formsubmit.co/cientificosdegatos@gmail.com" method="POST">
      <input type="hidden" name="_captcha" value="false">
      <input type="text" name="name" placeholder = "Nombre" required>
      <input type="email" name="email" placeholder="Email" required>
