@@ -8,6 +8,7 @@ colT2.title("TEST SALUD MENTAL")
 
 with st.sidebar:
     st.image("logo.png")
+    st.image("UPV.png")
     
 respuestas = {}
 
