@@ -7,6 +7,7 @@ st.set_page_config(
 
 with st.sidebar:
     st.image("logo.png")
+    st.image("UPV.png")
     
 
 colT1,colT2 = st.columns([1,3])
