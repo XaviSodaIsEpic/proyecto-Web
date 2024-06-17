@@ -300,4 +300,4 @@ with st.echo():
     from sklearn.metrics import accuracy_score
     y_predicted = dt.predict(X_test)
     ac = accuracy_score(dt.predict(X_train), y_train)
-    st.metric(label="Accuracy Score", value=f'{ac*100}%')
+    st.metric(label="Accuracy Score", value=f'{round(ac*100,4)}%')
