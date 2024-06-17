@@ -2,6 +2,7 @@ import streamlit as st
 
 with st.sidebar:
     st.image("logo.png")
+    st.image("UPV.png")
     
 
 colT1,colT2 = st.columns([1,3])
@@ -9,7 +10,9 @@ colT2.title("PROYECTO")
 
 st.write("En este página de nuestra página web se explicará y profundizaremos en más aspectos a la hora del estudio de este.")
 
+
 st.header("Estudio y gráficas")
+
 
 with st.echo():
     import pandas as pd
@@ -41,7 +44,6 @@ with st.echo():
                         '19. On a scale of 1 to 5, how frequently does your interest in daily activities fluctuate?':'Depression Q2',
                         '20. On a scale of 1 to 5, how often do you face issues regarding sleep?':'Depression Q3' },inplace=True)
     titles = list(data.columns)
-    titles
     titles[11], titles[12] = titles[12], titles[11]
     titles[12], titles[14] = titles[14], titles[12]
     titles[13], titles[14] = titles[14], titles[13]
@@ -284,7 +286,7 @@ with st.echo():
     for column in adicionales.columns:
         data[column] = adicionales[column]
     data.drop(data.iloc[:, 6:10], inplace = True, axis = 1)
-    data
+    st.dataframe(data)
 
 with st.echo():
     from sklearn.tree import DecisionTreeClassifier
@@ -297,4 +299,5 @@ with st.echo():
     dt.fit(X_train, y_train)
     from sklearn.metrics import accuracy_score
     y_predicted = dt.predict(X_test)
-    accuracy_score(dt.predict(X_train), y_train)
+    ac = accuracy_score(dt.predict(X_train), y_train)
+    st.metric(label="Accuracy Score", value=f'{ac*100}%')
